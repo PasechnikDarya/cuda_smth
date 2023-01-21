@@ -1,12 +1,13 @@
-#include <stdio.h>
+#include <iostream>
 
-__global__ void kernel(void) {
+__global__ void kernel(int i, int j, ){
 
 }
 
-int main() {
-    kernel<<1, 1>>();
+int main(void) {
 
-    printf("Hello, world!\n");
-    return 0;
+  kernel<<<1, 1>>>();
+  std::cout << "Hello, world!" << std::endl;
+
+  return 0;
 }
